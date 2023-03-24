@@ -1,0 +1,184 @@
+
+# App menüsüne text arayarak tıkla
+* "1" saniye bekle
+* "android:id/text1" elementininde "App" text değerini taşıyan elementi bul tıkla
+* "2" saniye bekle
+
+# App menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "3" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Action Bar menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "1" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Action Bar Tabs menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "2" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Toggle tab mode butonuna tıkla
+* "1" saniye bekle
+* "com.hmh.api:id/btn_toggle_tabs" id li elemente tıkla
+* "2" saniye bekle
+
+# Add new tab butonuna tıkla
+* "1" saniye bekle
+* "com.hmh.api:id/btn_add_tab" id li elemente tıkla
+* "2" saniye bekle
+
+# Activity menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "2" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Custom Title menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "3" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Left inputundaki text değerinin doğru geldiği kontrolü
+* "1" saniye bekle
+* "com.hmh.api:id/left_text_edit" elementinin text değeri "Left is best" değerine eşit mi
+
+# Right inputundaki text değerinin doğru geldiği kontrolü
+* "1" saniye bekle
+* "com.hmh.api:id/right_text_edit" elementinin text değeri "Right is always right" değerine eşit mi
+
+# Left inputuna <text> değerini yaz
+* "com.hmh.api:id/left_text_edit" elementine <text> değerini yaz
+* "2" saniye bekle
+
+# Right inputuna <text> değerini yaz
+* "com.hmh.api:id/right_text_edit" elementine <text> değerini yaz
+* "2" saniye bekle
+
+# Remove last tab butonuna tıkla
+* "1" saniye bekle
+* "com.hmh.api:id/btn_remove_tab" id li elemente tıkla
+* "2" saniye bekle
+
+# Remove all tabs butonuna tıkla
+* "1" saniye bekle
+* "com.hmh.api:id/btn_remove_all_tabs" id li elemente tıkla
+* "2" saniye bekle
+
+# Left text field temizle
+* "com.hmh.api:id/left_text_edit" elementin text alanını temizle
+* "2" saniye bekle
+
+# Right text field temizle
+* "com.hmh.api:id/left_text_edit" elementin text alanını temizle
+* "2" saniye bekle
+
+# Left buton üzerindeki text kontrolü
+* "com.hmh.api:id/left_text_button" elementinin text değeri "Change Left" değerine eşit mi
+* "1" saniye bekle
+
+# Right buton üzerindeki text kontrolü
+* "com.hmh.api:id/left_text_button" elementinin text değeri "Change Right" değerine eşit mi
+* "1" saniye bekle
+
+# Alert Dialogs menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "4" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# List Dialog butonuna tıkla
+* "1" saniye bekle
+* "com.hmh.api:id/radio_button" id li elemente tıkla
+* "2" saniye bekle
+
+# Command two elementine tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "2" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Command two elementinin text değerini map e ekle
+* "//android.widget.ListView/android.widget.TextView[3]" xpath li elementin değerlerini "commandTwo" map ekle
+
+# Fragment elementine tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "6" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Context Menu elementine tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "3" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Hide and Show elementine tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "7" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Hide butonlarının görünür olması kontrolü
+* "com.hmh.api:id/frag1hide" id li elementinin görünür olduğunu kontrol et
+* "1" saniye bekle
+* "com.hmh.api:id/frag2hide" id li elementinin görünür olduğunu kontrol et
+
+# Text boxesların görünür olması kontrolü
+* "//android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.EditText" xpath li elementinin görünür olduğunu kontrol et
+* "1" saniye bekle
+* "//android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText" xpath li elementinin görünür olduğunu kontrol et
+
+# 2. Hide butonuna tıkla
+* "1" saniye bekle
+* "127","1720" koordinatlarındaki elemente basılı tut "1000" kadar bekle
+* "3" saniye bekle
+
+# 2. show butonuna tıkla
+* "1" saniye bekle
+* "127","1720" koordinatlarındaki elemente basılı tut "1000" kadar bekle
+* "3" saniye bekle
+
+# 2. Text box ın koybolduğu kontrolü
+* "//android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText" xpath li elementinin görünür olmadığını kontrol et
+
+# 2. Text boxes ın görünür olduğu kontrolü
+* "//android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText" xpath li elementinin görünür olduğunu kontrol et
+* "1" saniye bekle
+
+# Hide butonunun textinin show a dönüştüğü kontrolü
+* "com.hmh.api:id/frag2hide" elementinin text değeri "Show" değerine eşit mi
+* "1" saniye bekle
+
+# Show butonunun textinin hide a dönüştüğü kontrolü
+* "com.hmh.api:id/frag2hide" elementinin text değeri "Hide" değerine eşit mi
+* "1" saniye bekle
+
+# Notification menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "10" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Incoming Mesage menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "1" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Show Notification butonuna tıkla
+* "1" saniye bekle
+* "175","370" koordinatlarındaki elemente basılı tut "1000" kadar bekle
+* "3" saniye bekle
+
+# Views menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "10" sırasındaki değere tıkla
+* "2" saniye bekle
+
+# Menu B elementinin geldiği kontrolü
+* "android:id/title" id li elementinin görünür olduğunu kontrol et
+
+# Long press me butonuna basılı tut
+* "535","500" koordinatlarındaki elemente basılı tut "2000" kadar bekle
+
+# Notification a tıkla
+* "android:id/title" elementininde "Joe" text değerini taşıyan elementi bul tıkla
+* "2" saniye bekle
+
+# Notification içeriği doğru mu
+* "//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView" elementinin text değeri "kthx. meet u for dinner. cul8r" değerini içeriyor mu
+* "2" saniye bekle

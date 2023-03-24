@@ -1,0 +1,8 @@
+# Erişim izinlerini ver
+* "2" saniye bekle
+* "com.android.permissioncontroller:id/continue_button" id li elemente tıkla
+
+# Sürüm uyarısı için tamama tıkla
+* "2" saniye bekle
+* "android:id/button1" id li elemente tıkla
+* "1" saniye bekle
