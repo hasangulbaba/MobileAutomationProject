@@ -46,11 +46,16 @@ public class StepImplementation {
 
     }
 
-    //aynılarının xpathlilerini yaz
     @Step({"<key> elementininde <expectedText> text değerini taşıyan elementi bul tıkla",
             "On <key> element find the element with <expectedText> value and click"})
     public void getElementTextFindScrollTextClick(String key, String expectedText) {
         methods.getElementTextFindScrollTextClick(methods.getById(key), expectedText);
+    }
+
+    @Step({"<key> xpath li elementininde <expectedText> text değerini taşıyan elementi bul tıkla",
+            "On <key> element find the element with <expectedText> value and click"})
+    public void getElementTextFindScrollTextClickXpath(String key, String expectedText) {
+        methods.getElementTextFindScrollTextClick(methods.getByXpath(key), expectedText);
     }
 
     @Step("notificationları kontrol et")
@@ -196,6 +201,25 @@ public class StepImplementation {
     public void performPressAndHoldAction(int x,int y,long mils) {
         new TouchAction((AndroidDriver)appiumDriver).longPress(longPressOptions().withPosition(point(x,y)).withDuration(Duration.ofMillis(mils))).release().perform();
 
+    }
+
+    @Step("Sağa kaydır <key> id li elementini bulana kadar")
+    public void swipeRightUntilFoundId(String key) {
+        methods.horizontalScroll(methods.getById(key));
+
+    }
+
+    @Step("Sağa kaydır <key> xpath li elementini bulana kadar")
+    public void swipeRightUntilFoundXpath(String key) {
+        methods.horizontalScroll(methods.getByXpath(key));
+
+    }
+
+    @Step("Swipedown <key> element <text> bulana kadar")
+    public void swipeDownUntilFoundText(String key, String text) {
+        while (!methods.getElementTextVisibleCheckTextControl(key, text)) {
+            methods.doSwipe();
+        }
     }
 
 }

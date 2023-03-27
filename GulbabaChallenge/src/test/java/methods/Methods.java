@@ -5,14 +5,18 @@ import io.appium.java_client.AppiumDriver;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.time.Duration;
+import java.util.Arrays;
 import java.util.List;
 import static java.time.Duration.ofMillis;
 import static org.openqa.selenium.interactions.PointerInput.Kind.TOUCH;
+import static org.openqa.selenium.interactions.PointerInput.MouseButton.LEFT;
+import static org.openqa.selenium.interactions.PointerInput.Origin.viewport;
 
 
 public class Methods {
@@ -219,6 +223,48 @@ public class Methods {
         Assert.assertTrue("Beklenen değer kontrolü başarılı", element.getText().contains(expectedText) );
         element.click();
         logger.info(expectedText + " değerine tıklandı.");
+    }
+
+
+    public void horizontalScroll(By by) {
+        WebElement element = findElement(by);
+        int centerY = element.getRect().y + (element.getSize().height / 2);
+        double startX = element.getRect().x + (element.getSize().width * 0.9);
+        double endX = element.getRect().x + (element.getSize().width * 0.1);
+        PointerInput finger = new PointerInput(TOUCH, "finger");
+        Sequence swipe = new Sequence(finger, 1);
+        swipe.addAction(finger.createPointerMove(Duration.ofSeconds(0), viewport(), (int) startX, centerY));
+        swipe.addAction(finger.createPointerDown(0));
+        swipe.addAction(finger.createPointerMove(ofMillis(700), viewport(), (int) endX, centerY));
+        swipe.addAction(finger.createPointerUp(0));
+        appiumDriver.perform(Arrays.asList(swipe));
+    }
+
+    public void doSwipe() {
+        Dimension dimension = appiumDriver.manage().window().getSize();
+        Point start = new Point((int) (dimension.width * 0.5), (int) (dimension.height * 0.5));
+        Point end = new Point((int) (dimension.width * 0.2), (int) (dimension.height * 0.1));
+        Sequence swipe = new Sequence(FINGER, 1)
+                .addAction(FINGER.createPointerMove(ofMillis(0), viewport(), start.getX(), start.getY()))
+                .addAction(FINGER.createPointerDown(LEFT.asArg()))
+                .addAction(FINGER.createPointerMove(ofMillis(1000), viewport(), end.getX(), end.getY()))
+                .addAction(FINGER.createPointerUp(LEFT.asArg()));
+        appiumDriver.perform(Arrays.asList(swipe));
+    }
+
+    public boolean getElementTextVisibleCheckTextControl(String key, String text) {
+        waitByMilliSeconds(250);
+        if (isElementVisible(getById(key), 2)) {
+            List<WebElement> elements = findElements(getById(key));
+            for (WebElement element : elements) {
+                if (element.getText().contains(text)) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            return false;
+        }
     }
 
 }

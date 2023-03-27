@@ -126,12 +126,12 @@
 
 # 2. Hide butonuna tıkla
 * "1" saniye bekle
-* "127","1720" koordinatlarındaki elemente basılı tut "1000" kadar bekle
+* "127","1720" koordinatlarındaki elemente basılı tut "500" kadar bekle
 * "3" saniye bekle
 
 # 2. show butonuna tıkla
 * "1" saniye bekle
-* "127","1720" koordinatlarındaki elemente basılı tut "1000" kadar bekle
+* "127","1720" koordinatlarındaki elemente basılı tut "500" kadar bekle
 * "3" saniye bekle
 
 # 2. Text box ın koybolduğu kontrolü
@@ -161,13 +161,13 @@
 
 # Show Notification butonuna tıkla
 * "1" saniye bekle
-* "175","370" koordinatlarındaki elemente basılı tut "1000" kadar bekle
+* "175","370" koordinatlarındaki elemente basılı tut "500" kadar bekle
 * "3" saniye bekle
 
 # Views menüsüne tıkla
 * "1" saniye bekle
-* "android:id/text1" elementinde "10" sırasındaki değere tıkla
-* "2" saniye bekle
+* "180","1715" koordinatlarındaki elemente basılı tut "500" kadar bekle
+* "3" saniye bekle
 
 # Menu B elementinin geldiği kontrolü
 * "android:id/title" id li elementinin görünür olduğunu kontrol et
@@ -181,4 +181,19 @@
 
 # Notification içeriği doğru mu
 * "//android.widget.LinearLayout/android.widget.LinearLayout/android.widget.TextView" elementinin text değeri "kthx. meet u for dinner. cul8r" değerini içeriyor mu
+* "2" saniye bekle
+
+# Tabs menüsüne scroll et
+* "1" saniye bekle
+* Swipedown "android:id/text1" element "TextSwitcher" bulana kadar
+* "4" saniye bekle
+
+# Tabs menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementininde "TextSwitcher" text değerini taşıyan elementi bul tıkla
+* "2" saniye bekle
+
+# Scrollable menüsüne tıkla
+* "1" saniye bekle
+* "android:id/text1" elementinde "5" sırasındaki değere tıkla
 * "2" saniye bekle

@@ -81,5 +81,8 @@ Scenario 7
 ----------------
  Remove apk and install
  "25" saniye bekle
- view elementine ulaşılamadı appiumda
 * Views menüsüne tıkla
+* Tabs menüsüne scroll et
+* Tabs menüsüne tıkla
+* Scrollable menüsüne tıkla
+tablara erişilemedeği için sağa sola kaydırma işlemleri yapılamamıştır
